@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
-    <link rel="stylesheet" href="./src/styles/index.css" />
-    <script src="./src/scripts/modal.js" defer></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Modal Registro</title>
-  </head>
-  <body>
-    <main>
-      <div class="main__container">
-        <section class="slogan">
-          <img src="./src/assets/pair_programming.svg" />
-        </section>
+  <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+  <link rel="stylesheet" href="./src/styles/index.css" />
+  <script src="./src/scripts/modal.js" defer></script>
+
+  <title>Modal Registro</title>
+</head>
+
+<body>
+  <main>
+    <div class="main__container">
+      <section class="slogan">
+        <img src="./src/assets/pair_programming.svg" />
+      </section>
+      <form class="form">
+        <div class="form__group">
+          <label for="email">E-mail</label>
+          <input class="input__box" type="text" name="email" id="email" />
+        </div>
+        <div class="form__group">
+          <label for="password">Senha</label>
+          <input class="input__box" type="text" name="password" id="password" />
+        </div>
+        <a href="#" target="_blank" class="form__forgot-pass">Esqueceu a senha?</a>
+        <a href="#" class="form__register-link">
+          Ainda não tem conta? Cadastre-se aqui!
+        </a>
+        <button class="form__login-btn">Entrar</button>
+      </form>
+    </div>
+    <dialog class="modalContainer">
+      <div class="modal">
         <form class="form">
           <div class="form__group">
-            <label for="email">E-mail</label>
-            <input class="input__box" type="text" name="email" id="email" />
+            <input class="input__box" type="text" placeholder="Nome">
           </div>
           <div class="form__group">
-            <label for="password">Senha</label>
-            <input
-              class="input__box"
-              type="text"
-              name="password"
-              id="password"
-            />
+            <input class="input__box" type="text" placeholder="Sobrenome">
           </div>
-          <a href="#" target="_blank" class="form__forgot-pass"
-            >Esqueceu a senha?</a
-          >
-          <a href="#" target="_blank" class="form__register-link">
-            Ainda não tem conta? Cadastre-se aqui!
-          </a>
-          <button class="form__login-btn">Entrar</button>
+          <div class="form__group">
+            <input type="text" class="input__box" placeholder="Celular ou email">
+          </div>
+          <div class="form__group">
+            <input type="text" class="input__box" placeholder="Nova senha">
+          </div>
         </form>
       </div>
-    </main>
-  </body>
+      <div class="modal_buttons">
+        <button class="close">Fechar modal</button>
+        <button class="cadastrar">Cadastrar</button>
+      </div>
+    </dialog>
+  </main>
+</body>
+
 </html>
